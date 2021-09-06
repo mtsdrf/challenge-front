@@ -1,7 +1,17 @@
-const App = () => {
+import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+
+import Welcome from './views/Welcome';
+import Choose from './views/Choose';
+
+export default function App() {
     return (
-        <h1>Hello world</h1>
+        <BrowserRouter>
+            <Switch>
+                <Route exact path="/" component={Welcome}/>
+                <Route path="/welcome" component={Welcome}/>
+                <Route path="/choose" component={Choose}/>
+            </Switch>
+        </BrowserRouter>
     );
 }
-
-export default App;
