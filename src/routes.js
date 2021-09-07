@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Welcome from './pages/Welcome';
 import Choose from './pages/Choose';
 
-export default function App() {
+const createRoutes = () => {
     return (
         <BrowserRouter>
             <Switch>
@@ -15,3 +15,5 @@ export default function App() {
         </BrowserRouter>
     );
 }
+
+export default createRoutes;
