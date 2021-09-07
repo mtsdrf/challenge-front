@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+    width: 1440px;
+    height: 1024px;
+    margin: 0;
+    background: #FFF
+`;
+
 export const Title = styled.span `
 
     position: absolute;

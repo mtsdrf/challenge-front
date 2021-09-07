@@ -1,10 +1,12 @@
-import { Title, Subtitle, ButtonStart } from '../../styles/welcome';
-import { Link } from 'react-router-dom';
 import { Col, Row } from 'reactstrap';
+import { Link } from 'react-router-dom';
+import { Title, Subtitle, ButtonStart } from './style';
+
+import { Container } from './style';
 
 const Welcome = () => {
     return (
-        <div className="content">
+        <Container>
             <Row>
                 <Col sm="12" md="12" lg="12">
                     <Title>
@@ -24,7 +26,7 @@ const Welcome = () => {
                     </Link>
                 </Col>
             </Row>
-        </div>
+        </Container>
     );
 }
 
