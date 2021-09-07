@@ -1,29 +1,33 @@
 import styled from "styled-components";
 
-export const Title = styled.h1 `
+export const Title = styled.span `
 
     position: absolute;
     width: 688px;
     height: 88px;
-    margin-top: 210px;
     margin-left: 364px;
+    margin-top: 210px;
 
-    font-family: 'Montserrat', sans-serif;
+    font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
     font-size: 72px;
     line-height: 88px;
 
+    display: flex;
+    align-items: center;
+    text-align: center;
+
     color: #2C97D1;
 
-    span {
-        font-weight: 700!important;
+    label {
+        font-weight: 700;
     }
 `;
 
 export const Subtitle = styled.h3 `
     position: absolute;
-    width: 265px;
+    width: 264px;
     height: 17px;
     margin-left: 591px;
     margin-top: 305px;
@@ -33,6 +37,7 @@ export const Subtitle = styled.h3 `
     font-weight: normal;
     font-size: 14px;
     line-height: 17px;
+    /* identical to box height */
 
     display: flex;
     align-items: center;
@@ -45,8 +50,8 @@ export const Subtitle = styled.h3 `
 export const ButtonStart = styled.button `
     cursor: pointer;
     position: absolute;
-    width: 189px;
-    height: 56px;
+    width: 177px;
+    height: 54px;
     margin-left: 625px;
     margin-top: 484px;
 
