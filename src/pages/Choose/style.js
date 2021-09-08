@@ -51,7 +51,7 @@ export const ButtonBack = styled.button`
     }
 `;
 
-export const ButtonChoose = styled.button `
+export const ButtonChoose = styled.button`
     position: absolute;
     width: 347px;
     height: 56px;

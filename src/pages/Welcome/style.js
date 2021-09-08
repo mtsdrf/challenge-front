@@ -6,10 +6,10 @@ export const Container = styled.div`
     height: 1024px;
     margin: 0;
     margin-left: 240px;
-    background: #FFF
+    background: #FFF;
 `;
 
-export const Title = styled.span `
+export const Title = styled.span`
 
     position: absolute;
     width: 688px;
@@ -34,7 +34,7 @@ export const Title = styled.span `
     }
 `;
 
-export const Subtitle = styled.h3 `
+export const Subtitle = styled.h3`
     position: absolute;
     width: 264px;
     height: 17px;
@@ -56,7 +56,7 @@ export const Subtitle = styled.h3 `
     color: #2C97D1;
 `;
 
-export const ButtonStart = styled.button `
+export const ButtonStart = styled.button`
     cursor: pointer;
     position: absolute;
     width: 177px;
