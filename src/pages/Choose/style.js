@@ -27,7 +27,7 @@ export const ButtonBack = styled.div`
     
         position: relative;
         width: 109px;
-        height: 47px;
+        height: 100%;
     
         border: 0;
     
@@ -69,7 +69,7 @@ export const ButtonChoose = styled.div`
     button {
         position: relative;
         width: 347px;
-        height: 56px;
+        height: 100%;
         
         font-size: 18px;
         font-family: 'proxima-nova', sans-serif;
@@ -107,7 +107,7 @@ export const Image = styled.div`
     div {
         position: relative;
         width: 380px;
-        height: 380px;
+        height: 100%;
         background: #C4C4C4;
         border-radius: 50%;
         
@@ -120,13 +120,13 @@ export const ChoosedMaster = styled.div`
     height: 103px;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 19px;
 
     div {
         text-align: center;
         position: relative;
         width: 647px;
-        height: 103px;
     
         font-family: Montserrat;
         font-style: normal;
