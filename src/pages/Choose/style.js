@@ -46,7 +46,7 @@ export const ButtonBack = styled.div`
             }
         }};
     
-        span > svg {
+        svg {
             vertical-align: middle;
             height: ${ props => props.size};
             width: ${ props => props.size };
