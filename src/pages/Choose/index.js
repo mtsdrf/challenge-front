@@ -8,7 +8,7 @@ import darth_vader from '../../assets/img/darth_vader.png';
 import luke_skywalker from '../../assets/img/luke_skywalker.png';
 import luke_vs_darth from '../../assets/img/luke_vs_darth.png';
 
-import { Container, ButtonBack, ButtonChoose, Image, ChoosedMaster } from './style';
+import { Container, Box, ButtonBack, ButtonChoose, Image, ChoosedMaster } from './style';
 
 class Choose extends Component {
 
@@ -62,27 +62,30 @@ class Choose extends Component {
                     </ButtonBack>
                 </Link>
 
-                <ButtonChoose 
-                    onClick={this.getDataApi}
-                    disabled={isLoading ? true : false}
-                    isLoading={isLoading}
-                    isDark={isDark}
-                >
-                    <button>
-                        <b>choose your path again, Padawan</b>
-                    </button>
-                </ButtonChoose>
+                <Box className="box">
+                    <ButtonChoose 
+                        className="button-choose"
+                        onClick={this.getDataApi}
+                        disabled={isLoading ? true : false}
+                        isLoading={isLoading}
+                        isDark={isDark}
+                    >
+                        <button>
+                            <b>choose your path again, Padawan</b>
+                        </button>
+                    </ButtonChoose>
 
-                <Image src={img}>
-                    <div alt={`Choosed side: ${name}`}/>
-                </Image>
+                    <Image className="image" src={img}>
+                        <div alt={`Choosed side: ${name}`}/>
+                    </Image>
 
 
-                <ChoosedMaster isDark={isDark}>
-                    <div>
-                        { name !== null ? <pre>Your master is <b>{name}</b></pre> : '' }
-                    </div>
-                </ChoosedMaster>
+                    <ChoosedMaster className="choosed-master" isDark={isDark}>
+                        <div>
+                            { name !== null ? <pre>Your master is <b>{name}</b></pre> : '' }
+                        </div>
+                    </ChoosedMaster>
+                </Box>
 
             </Container>
         );

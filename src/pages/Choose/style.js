@@ -14,6 +14,20 @@ export const Container = styled.div`
     }};
 `;
 
+export const Box = styled.div`
+    display: flex;
+    flex-direction: column;
+    .button-choose { order: 1; }
+    .image { order: 2; }
+    .choosed-master { order: 3; }
+
+    @media only screen and (max-width: 800px) {
+        .button-choose { order: 3; }
+        .image { order: 1; }
+        .choosed-master { order: 2; }
+    }
+`;
+
 export const ButtonBack = styled.div`
     width: 100%;
     height: 47px;
@@ -52,10 +66,6 @@ export const ButtonBack = styled.div`
             width: ${ props => props.size };
             color: ${ props => props.isDark ? '#FFF' : '#2A2A2A'};
         }
-/* 
-        @media only screen and (max-width: 800px) {
-            font-size: 9px;
-        } */
     }
 `;
 
