@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 1440px;
+    height: 1024px;
     margin: 0;
     background: #FFF;
 `;
@@ -13,7 +13,7 @@ export const Title = styled.div`
     justify-content: center;
     width: 100%;
     height: 88px;
-    margin-top: 210px;
+    padding-top: 210px;
     
     span {
         position: relative;
