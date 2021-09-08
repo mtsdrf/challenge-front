@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+    position: relative;
     width: 1440px;
     height: 1024px;
     margin: 0;
+    margin-left: 240px;
     background: ${ props => {
         if(props.isDark !== null){
             return props.isDark ? '#2A2A2A' : '#FBFE63';
