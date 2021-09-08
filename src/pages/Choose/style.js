@@ -5,7 +5,6 @@ export const Container = styled.div`
     width: 1440px;
     height: 1024px;
     margin: 0;
-    margin-left: 240px;
     background: ${ props => {
         if(props.isDark !== null){
             return props.isDark ? '#2A2A2A' : '#FBFE63';
@@ -15,101 +14,126 @@ export const Container = styled.div`
     }};
 `;
 
-export const ButtonBack = styled.button`
-    cursor: pointer;
-
-    position: absolute;
-    width: 109px;
+export const ButtonBack = styled.div`
+    width: 100%;
     height: 47px;
-    margin-left: 40px;
-    margin-top: 35px;
-
-    border: 0;
-
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 22px;
     display: flex;
-    align-items: center;
-    text-align: center;
+    justify-content: start;
+    padding-top: 35px;
 
-    background-color: transparent;
-    color: ${ props => {
-        if(props.isDark !== null){
-            return props.isDark ? '#FFF' : '#2A2A2A'
-        } else {
-            return '#2A2A2A'
+    span {
+        margin-left: 3%;
+        cursor: pointer;
+    
+        position: relative;
+        width: 109px;
+        height: 47px;
+    
+        border: 0;
+    
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+    
+        background-color: transparent;
+        color: ${ props => {
+            if(props.isDark !== null){
+                return props.isDark ? '#FFF' : '#2A2A2A'
+            } else {
+                return '#2A2A2A'
+            }
+        }};
+    
+        span > svg {
+            vertical-align: middle;
+            height: ${ props => props.size};
+            width: ${ props => props.size };
+            color: ${ props => props.isDark ? '#FFF' : '#2A2A2A'};
         }
-    }};
-
-    svg {
-        height: ${ props => props.size};
-        width: ${ props => props.size };
-        color: ${ props => props.isDark ? '#FFF' : '#2A2A2A'};
+/* 
+        @media only screen and (max-width: 800px) {
+            font-size: 9px;
+        } */
     }
 `;
 
-export const ButtonChoose = styled.button`
-    position: absolute;
-    width: 347px;
+export const ButtonChoose = styled.div`
+    width: 100%;
     height: 56px;
-    margin-left: 546px;
-    margin-top: 175px;
-    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    margin-top: 59px;
 
-    font-family: 'proxima-nova', sans-serif;
-
-    border-radius: 10px;
-    border: 0;
-    cursor: pointer;
-
-    cursor: ${ props => props.isLoading && 'wait' };
-
-    color: ${ props => {
-        if(props.isDark !== null){
-            return props => props.isDark ? '#2A2A2A' : '#FBFE63';
-        } else {
-            return '#FFF';
+    button {
+        position: relative;
+        width: 347px;
+        height: 56px;
+        
+        font-size: 18px;
+        font-family: 'proxima-nova', sans-serif;
+    
+        border-radius: 10px;
+        border: 0;
+        cursor: pointer;
+    
+        cursor: ${ props => props.isLoading && 'wait' };
+        opacity: ${ props => props.isLoading && '0.5' };
+    
+        color: ${ props => {
+            if(props.isDark !== null){
+                return props => props.isDark ? '#2A2A2A' : '#FBFE63';
+            } else {
+                return '#FFF';
+            }
+        }};
+    
+        background: ${ props => props.isDark ? '#FFF' : '#2A2A2A'};
+    
+        :disabled {
+            opacity: 0.5;
         }
-    }};
-
-    background: ${ props => props.isDark ? '#FFF' : '#2A2A2A'};
-
-    :disabled {
-        opacity: 0.5;
     }
 `;
 
 export const Image = styled.div`
-    position: absolute;
-    width: 380px;
+    width: 100%;
     height: 380px;
-    left: 530px;
-    top: 322px;
-    background: #C4C4C4;
-    border-radius: 50%;
-    
-    background: url(${props => props.src});
+    display: flex;
+    justify-content: center;
+    margin-top: 91px;
+
+    div {
+        position: relative;
+        width: 380px;
+        height: 380px;
+        background: #C4C4C4;
+        border-radius: 50%;
+        
+        background: url(${props => props.src});
+    }
 `;
 
 export const ChoosedMaster = styled.div`
-    position: absolute;
-    width: 647px;
+    width: 100%;
     height: 103px;
-    left: 396px;
-    top: 720px;
-
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 44px;
     display: flex;
-    align-items: center;
-    text-align: center;
     justify-content: center;
+    margin-top: 19px;
 
-    color: ${ props => props.isDark ? '#FFF' : '#2A2A2A'};
+    div {
+        text-align: center;
+        position: relative;
+        width: 647px;
+        height: 103px;
+    
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 36px;
+        line-height: 44px;
+    
+        color: ${ props => props.isDark ? '#FFF' : '#2A2A2A'};
+    }
 `;
