@@ -59,6 +59,10 @@ export const ButtonBack = styled.div`
                 return '#2A2A2A'
             }
         }};
+
+        @media only screen and (max-width: 800px) {
+            margin-left: 22%;
+        }
     
         svg {
             vertical-align: middle;
@@ -75,6 +79,10 @@ export const ButtonChoose = styled.div`
     display: flex;
     justify-content: center;
     margin-top: 59px;
+
+    @media only screen and (max-width: 800px) {
+        margin-top: 34px;
+    }
 
     button {
         position: relative;
@@ -114,6 +122,10 @@ export const Image = styled.div`
     justify-content: center;
     margin-top: 91px;
 
+    @media only screen and (max-width: 800px) {
+        height: 302px;
+    }
+
     div {
         position: relative;
         width: 380px;
@@ -122,6 +134,11 @@ export const Image = styled.div`
         border-radius: 50%;
         
         background: url(${props => props.src});
+
+        @media only screen and (max-width: 800px) {
+            width: 302px;
+            background-size: cover;
+        }
     }
 `;
 
@@ -145,5 +162,11 @@ export const ChoosedMaster = styled.div`
         line-height: 44px;
     
         color: ${ props => props.isDark ? '#FFF' : '#2A2A2A'};
+
+        pre > b {
+            @media only screen and (max-width: 800px) {
+                display: block;
+            }
+        }
     }
 `;
