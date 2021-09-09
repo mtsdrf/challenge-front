@@ -3,6 +3,8 @@
 
 App desenvolvido para simular em qual lado da força você está...
 
+Link de acesso: https://mtsdrf.github.io/challenge-front/
+
 ## Passos para execução
 ```sh
 # Clone do projeto
