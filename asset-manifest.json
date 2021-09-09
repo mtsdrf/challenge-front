@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/challenge-front/static/css/main.b67a80e9.chunk.css",
+    "main.js": "/challenge-front/static/js/main.9d2ac75e.chunk.js",
+    "main.js.map": "/challenge-front/static/js/main.9d2ac75e.chunk.js.map",
+    "runtime-main.js": "/challenge-front/static/js/runtime-main.6c404741.js",
+    "runtime-main.js.map": "/challenge-front/static/js/runtime-main.6c404741.js.map",
+    "static/js/2.3369734b.chunk.js": "/challenge-front/static/js/2.3369734b.chunk.js",
+    "static/js/2.3369734b.chunk.js.map": "/challenge-front/static/js/2.3369734b.chunk.js.map",
+    "index.html": "/challenge-front/index.html",
+    "static/css/main.b67a80e9.chunk.css.map": "/challenge-front/static/css/main.b67a80e9.chunk.css.map",
+    "static/js/2.3369734b.chunk.js.LICENSE.txt": "/challenge-front/static/js/2.3369734b.chunk.js.LICENSE.txt",
+    "static/media/darth_vader.5b59175e.png": "/challenge-front/static/media/darth_vader.5b59175e.png",
+    "static/media/luke_skywalker.7ac8850b.png": "/challenge-front/static/media/luke_skywalker.7ac8850b.png",
+    "static/media/luke_vs_darth.ca29ae74.png": "/challenge-front/static/media/luke_vs_darth.ca29ae74.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6c404741.js",
+    "static/js/2.3369734b.chunk.js",
+    "static/css/main.b67a80e9.chunk.css",
+    "static/js/main.9d2ac75e.chunk.js"
+  ]
+}
