@@ -1,9 +1,17 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+    @media only screen and (max-width: 800px) {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    @media only screen and (min-width: 800px) {
+        width: 1440px;
+        height: 1024px;
+    }
+
     position: relative;
-    width: 1440px;
-    height: 1024px;
     margin: 0;
     background: ${ props => {
         if(props.isDark !== null){
@@ -59,10 +67,6 @@ export const ButtonBack = styled.div`
                 return '#2A2A2A'
             }
         }};
-
-        @media only screen and (max-width: 800px) {
-            margin-left: 22%;
-        }
     
         svg {
             vertical-align: middle;
