@@ -6,7 +6,7 @@ import Choose from './pages/Choose';
 
 const createRoutes = () => {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Switch>
                 <Route exact path="/" component={Welcome}/>
                 <Route path="/welcome" component={Welcome}/>
