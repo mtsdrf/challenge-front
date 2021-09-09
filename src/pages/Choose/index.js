@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { BsArrowLeftShort } from "react-icons/bs";
 
 import { getData } from '../../services/api';
 
+import { Container, Box, ButtonBack, ButtonChoose, Image, ChoosedMaster } from './style';
+import { BsArrowLeftShort } from "react-icons/bs";
 import darth_vader from '../../assets/img/darth_vader.png';
 import luke_skywalker from '../../assets/img/luke_skywalker.png';
 import luke_vs_darth from '../../assets/img/luke_vs_darth.png';
-
-import { Container, Box, ButtonBack, ButtonChoose, Image, ChoosedMaster } from './style';
 
 class Choose extends Component {
 
