@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Col, Row } from 'reactstrap';
 import { BsArrowLeftShort } from "react-icons/bs";
 
 import { getData } from '../../services/api';
@@ -9,7 +8,7 @@ import darth_vader from '../../assets/img/darth_vader.png';
 import luke_skywalker from '../../assets/img/luke_skywalker.png';
 import luke_vs_darth from '../../assets/img/luke_vs_darth.png';
 
-import { Container, ButtonBack, ButtonChoose, Image, ChoosedMaster } from './style';
+import { Container, Box, ButtonBack, ButtonChoose, Image, ChoosedMaster } from './style';
 
 class Choose extends Component {
 
@@ -38,6 +37,8 @@ class Choose extends Component {
             this.setState({ isLoading: false, isDark: false, name: first_request.name });
         } else if (second_request !== null && second_request.time < first_request.time) {
             this.setState({ isLoading: false, isDark: true, name: second_request.name });
+        } else {
+            this.setState({ isLoading: false, isDark: null, name: null });
         }
     }
 
@@ -54,43 +55,37 @@ class Choose extends Component {
 
         return (
             <Container isDark={isDark}>
+                
+                <Link to="/welcome">
+                    <ButtonBack isDark={isDark}>
+                        <span><BsArrowLeftShort size={60}/>back</span>
+                    </ButtonBack>
+                </Link>
 
-                <Row>
-                    <Col sm="12" md="12" lg="12">
-                        <Link to="/welcome">
-                            <ButtonBack isDark={isDark}>
-                                <BsArrowLeftShort size={90}/>back
-                            </ButtonBack>
-                        </Link>
-                    </Col>
-                </Row>
-
-                <Row>
-                    <Col sm="12" md="12" lg="12">
-                        <ButtonChoose 
-                            onClick={this.getDataApi}
-                            disabled={isLoading ? true : false}
-                            isLoading={isLoading}
-                            isDark={isDark}
-                        >
+                <Box className="box">
+                    <ButtonChoose 
+                        className="button-choose"
+                        onClick={this.getDataApi}
+                        disabled={isLoading ? true : false}
+                        isLoading={isLoading}
+                        isDark={isDark}
+                    >
+                        <button>
                             <b>choose your path again, Padawan</b>
-                        </ButtonChoose>
-                    </Col>
-                </Row>
+                        </button>
+                    </ButtonChoose>
 
-                <Row>
-                    <Col sm="12" md="12" lg="12">
-                        <Image alt={`Choosed side: ${name}`} src={img}/>
-                    </Col>
-                </Row>
+                    <Image className="image" src={img}>
+                        <div alt={`Choosed side: ${name}`}/>
+                    </Image>
 
-                <Row>
-                    <Col sm="12" md="12" lg="12">
-                        <ChoosedMaster isDark={isDark}>
+
+                    <ChoosedMaster className="choosed-master" isDark={isDark}>
+                        <div>
                             { name !== null ? <pre>Your master is <b>{name}</b></pre> : '' }
-                        </ChoosedMaster>
-                    </Col>
-                </Row>
+                        </div>
+                    </ChoosedMaster>
+                </Box>
 
             </Container>
         );
